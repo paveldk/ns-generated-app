@@ -1,0 +1,26 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded">
+    <StackLayout>
+
+        <Label text="Username" cssClass="label" />
+        <Border borderWidth="1" borderColor="#ccc">
+            <TextField text="{{ username }}" cssClass="input" />
+        </Border>
+
+        <Label text="Email" cssClass="label" />
+        <Border borderWidth="1" borderColor="#ccc">
+            <TextField text="{{ email }}" cssClass="input" />
+        </Border>
+
+        <Label text="Password" cssClass="label" />
+        <Border borderWidth="1" borderColor="#ccc">
+            <TextField text="{{ password }}" secure="true" cssClass="input" />
+        </Border>
+
+        <Button text="Register" tap="{{ onRegister }}" />
+
+        <Button text="Sign In" tap="{{ onShowRegister }}" />
+
+
+        <!-- additional view content -->
+    </StackLayout>
+</Page>

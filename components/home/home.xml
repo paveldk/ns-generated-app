@@ -1,0 +1,6 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded">
+    <StackLayout>
+        <Label text="O Hai there" />
+        <!-- additional view content -->
+    </StackLayout>
+</Page>

@@ -1,0 +1,19 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded">
+    <StackLayout>
+
+
+        <ListView items="{{ listItems }}">
+
+            <ListView.itemTemplate>
+                <GridLayout columns="*">
+
+
+                    <Label col="0" text="{{ header }}" />
+
+                </GridLayout>
+            </ListView.itemTemplate>
+        </ListView>
+
+        <!-- additional view content -->
+    </StackLayout>
+</Page>
