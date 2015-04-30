@@ -64,3 +64,18 @@ searchbar
     color: #284848;
     horizontal-align: center;
 }
+
+.padded-label
+{
+    padding: 0 12;
+}
+
+.padded-label-stack
+{
+    padding: 12;
+}
+
+.title-label
+{
+    padding: 0 0 12 0;
+}

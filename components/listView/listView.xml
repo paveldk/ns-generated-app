@@ -7,8 +7,9 @@
         <StackLayout row="1">
             <ListView items="{{ listItems }}">
                 <ListView.itemTemplate>
-                    <GridLayout columns="*">
-                        <Label col="0" text="{{ header }}" />
+                    <GridLayout columns="*" cssClass="padded-label">
+                        <StackLayout height="50" />
+                        <Label col="0" text="{{ header }}" textWrap="true" />
                     </GridLayout>
                 </ListView.itemTemplate>
             </ListView>

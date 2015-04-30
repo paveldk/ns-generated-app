@@ -20,14 +20,10 @@ function pageLoaded(args) {
             result.forEach(function(item) {
                 console.log(item.Picture);
                 itemsList.push({
-                    icon: 'icon',
-
+                    icon: "~/images/home.png",
                     image: item.Picture,
-
                     header: item.Text,
-
-                    description: item.Id,
-
+                    description: "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text"
                 });
             });
 
