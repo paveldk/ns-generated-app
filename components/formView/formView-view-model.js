@@ -26,6 +26,8 @@ ViewModel.prototype.onfirstFormFormCancel = function() {
     });
 };
 
+ViewModel.prototype.pageTitle = 'Form View';
+
 // additional properties
 
 module.exports = new ViewModel();

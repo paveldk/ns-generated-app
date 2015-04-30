@@ -31,6 +31,8 @@ ViewModel.prototype.onShowRegister = function() {
     });
 };
 
+ViewModel.prototype.pageTitle = 'Sign in View';
+
 // additional properties
 
 module.exports = new ViewModel();

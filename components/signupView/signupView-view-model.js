@@ -33,6 +33,8 @@ ViewModel.prototype.onShowRegister = function() {
     });
 };
 
+ViewModel.prototype.pageTitle = 'Register View';
+
 // additional properties
 
 module.exports = new ViewModel();

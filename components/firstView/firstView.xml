@@ -1,6 +1,12 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded">
-    <StackLayout>
-        <Label text="You have successfully done something! Congratulations!" />
-        <!-- additional view content -->
-    </StackLayout>
+<Page xmlns="http://www.nativescript.org/tns.xsd"
+      xmlns:appbuilder="appbuilder/action-bar"
+      loaded="pageLoaded">
+
+    <GridLayout rows="auto, *" swipe="backSwipe">
+        <appbuilder:action-bar />
+        <StackLayout row="1">
+            <Label text="You have successfully done something! Congratulations!" />
+            <!-- additional view content -->
+        </StackLayout>
+    </GridLayout>
 </Page>

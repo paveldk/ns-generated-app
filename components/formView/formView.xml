@@ -1,48 +1,54 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded">
-    <StackLayout>
+<Page xmlns="http://www.nativescript.org/tns.xsd"
+      xmlns:appbuilder="appbuilder/action-bar"
+      loaded="pageLoaded">
 
-        <StackLayout>
+    <GridLayout rows="auto, *" swipe="backSwipe">
+        <appbuilder:action-bar />
+        <StackLayout row="1">
 
-            <Label text="TextField" cssClass="label" />
-            <Border borderWidth="1" borderColor="#ccc">
+            <StackLayout>
 
-                <TextField cssClass="input" />
+                <Label text="TextField" cssClass="label" />
+                <Border borderWidth="1" borderColor="#ccc">
 
-            </Border>
+                    <TextField cssClass="input" />
 
-
-            <Label text="SearchBox" cssClass="label" />
-            <Border borderWidth="1" borderColor="#ccc">
-
-                <SearchBar />
-
-            </Border>
+                </Border>
 
 
-            <Label text="PasswordBox" cssClass="label" />
-            <Border borderWidth="1" borderColor="#ccc">
+                <Label text="SearchBox" cssClass="label" />
+                <Border borderWidth="1" borderColor="#ccc">
 
-                <TextField secure="true" cssClass="input" />
+                    <SearchBar />
 
-            </Border>
-
-
-            <Label text="SwitchField" cssClass="label" />
-            <Border borderWidth="1" borderColor="#ccc">
-
-                <Switch checked="false" />
-
-            </Border>
-
-            <!-- firstForm additional fields -->
-
-            <Button text="Cancel" tap="onfirstFormFormCancel" />
+                </Border>
 
 
-            <Button text="Confirm" tap="onfirstFormFormSubmit" />
+                <Label text="PasswordBox" cssClass="label" />
+                <Border borderWidth="1" borderColor="#ccc">
 
+                    <TextField secure="true" cssClass="input" />
+
+                </Border>
+
+
+                <Label text="SwitchField" cssClass="label" />
+                <Border borderWidth="1" borderColor="#ccc">
+
+                    <Switch checked="false" />
+
+                </Border>
+
+                <!-- firstForm additional fields -->
+
+                <Button text="Cancel" tap="onfirstFormFormCancel" />
+
+
+                <Button text="Confirm" tap="onfirstFormFormSubmit" />
+
+            </StackLayout>
+
+            <!-- additional view content -->
         </StackLayout>
-
-        <!-- additional view content -->
-    </StackLayout>
+    </GridLayout>
 </Page>

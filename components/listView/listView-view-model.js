@@ -10,6 +10,7 @@ function ViewModel() {
 _extends(ViewModel, observable.Observable);
 
 ViewModel.prototype.listItems = [];
+ViewModel.prototype.pageTitle = 'DataList View';
 
 // additional properties
 

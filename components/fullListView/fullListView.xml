@@ -1,22 +1,28 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded">
-    <StackLayout>
+<Page xmlns="http://www.nativescript.org/tns.xsd"
+      xmlns:appbuilder="appbuilder/action-bar"
+      loaded="pageLoaded">
 
-        <ListView items="{{ listItems }}">
+    <GridLayout rows="auto, *" swipe="backSwipe">
+        <appbuilder:action-bar />
+        <StackLayout row="1">
 
-            <ListView.itemTemplate>
-                <GridLayout columns="20, 100, *">
+            <ListView items="{{ listItems }}">
 
-                    <Image col="0" width="20" height="20" src="{{ icon }}" />
-                    <Image col="1" width="100" height="100" src="{{ image }}" />
-                    <StackLayout col="2">
-                        <Label text="{{ header }}" />
-                        <Label text="{{ description }}" />
-                    </StackLayout>
+                <ListView.itemTemplate>
+                    <GridLayout columns="20, 100, *">
 
-                </GridLayout>
-            </ListView.itemTemplate>
-        </ListView>
+                        <Image col="0" width="20" height="20" src="{{ icon }}" />
+                        <Image col="1" width="100" height="100" src="{{ image }}" />
+                        <StackLayout col="2">
+                            <Label text="{{ header }}" />
+                            <Label text="{{ description }}" />
+                        </StackLayout>
 
-        <!-- additional view content -->
-    </StackLayout>
+                    </GridLayout>
+                </ListView.itemTemplate>
+            </ListView>
+
+            <!-- additional view content -->
+        </StackLayout>
+    </GridLayout>
 </Page>

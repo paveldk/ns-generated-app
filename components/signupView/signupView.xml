@@ -1,26 +1,32 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded">
-    <StackLayout>
+<Page xmlns="http://www.nativescript.org/tns.xsd"
+      xmlns:appbuilder="appbuilder/action-bar"
+      loaded="pageLoaded">
 
-        <Label text="Username" cssClass="label" />
-        <Border borderWidth="1" borderColor="#ccc">
-            <TextField text="{{ username }}" cssClass="input" />
-        </Border>
+    <GridLayout rows="auto, *" swipe="backSwipe">
+        <appbuilder:action-bar />
+        <StackLayout row="1">
 
-        <Label text="Email" cssClass="label" />
-        <Border borderWidth="1" borderColor="#ccc">
-            <TextField text="{{ email }}" cssClass="input" />
-        </Border>
+            <Label text="Username" cssClass="label" />
+            <Border borderWidth="1" borderColor="#ccc">
+                <TextField text="{{ username }}" cssClass="input" />
+            </Border>
 
-        <Label text="Password" cssClass="label" />
-        <Border borderWidth="1" borderColor="#ccc">
-            <TextField text="{{ password }}" secure="true" cssClass="input" />
-        </Border>
+            <Label text="Email" cssClass="label" />
+            <Border borderWidth="1" borderColor="#ccc">
+                <TextField text="{{ email }}" cssClass="input" />
+            </Border>
 
-        <Button text="Register" tap="{{ onRegister }}" />
+            <Label text="Password" cssClass="label" />
+            <Border borderWidth="1" borderColor="#ccc">
+                <TextField text="{{ password }}" secure="true" cssClass="input" />
+            </Border>
 
-        <Button text="Sign In" tap="{{ onShowRegister }}" />
+            <Button text="Register" tap="{{ onRegister }}" />
+
+            <Button text="Sign In" tap="{{ onShowRegister }}" />
 
 
-        <!-- additional view content -->
-    </StackLayout>
+            <!-- additional view content -->
+        </StackLayout>
+    </GridLayout>
 </Page>

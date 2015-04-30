@@ -1,19 +1,19 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded">
-    <StackLayout>
+<Page xmlns="http://www.nativescript.org/tns.xsd"
+      xmlns:appbuilder="appbuilder/action-bar"
+      loaded="pageLoaded">
 
+    <GridLayout rows="auto, *" swipe="backSwipe">
+        <appbuilder:action-bar />
+        <StackLayout row="1">
+            <ListView items="{{ listItems }}">
+                <ListView.itemTemplate>
+                    <GridLayout columns="*">
+                        <Label col="0" text="{{ header }}" />
+                    </GridLayout>
+                </ListView.itemTemplate>
+            </ListView>
 
-        <ListView items="{{ listItems }}">
-
-            <ListView.itemTemplate>
-                <GridLayout columns="*">
-
-
-                    <Label col="0" text="{{ header }}" />
-
-                </GridLayout>
-            </ListView.itemTemplate>
-        </ListView>
-
-        <!-- additional view content -->
-    </StackLayout>
+            <!-- additional view content -->
+        </StackLayout>
+    </GridLayout>
 </Page>

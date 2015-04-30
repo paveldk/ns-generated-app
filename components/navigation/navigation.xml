@@ -1,12 +1,17 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded">
-    <Label text="Tap the button" cssClass="title" />
-    <ListView items="{{ menuItems }}" isScrollings="true" itemTap="menuItemTap">
-        <ListView.itemTemplate>
-            <GridLayout columns="10, *, 10", rows="auto, 25">
-                <Image source="" />
-                <Label text="{{ title }}" textWrap="true" minHeight="50" />
-                <Image source="" />
-            </GridLayout>
-        </ListView.itemTemplate>
-    </ListView>
+<Page xmlns="http://www.nativescript.org/tns.xsd"
+      xmlns:appbuilder="appbuilder/action-bar"
+      loaded="pageLoaded">
+
+    <GridLayout rows="auto, *" swipe="backSwipe">
+        <appbuilder:action-bar />
+        <!-- CONTENT -->
+        <ListView row="1" items="{{ menuItems }}" isScrollings="true" itemTap="menuItemTap">
+            <ListView.itemTemplate>
+                <GridLayout columns="48, *" rows="*" minHeight="50">
+                    <Image src="{{ icon }}" width="32" height="32" margin="8 6" />
+                    <Label col="1" text="{{ title }}" textWrap="true" />
+                </GridLayout>
+            </ListView.itemTemplate>
+        </ListView>
+    </GridLayout>
 </Page>

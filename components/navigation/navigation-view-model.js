@@ -4,28 +4,33 @@ var menuItems,
     navigationViewModel = new observable.Observable();
 
 menuItems = [{
-    "title": "home",
+    "title": "Home",
+    "icon": "~/images/home.png",
     "modulePath": "components/home/home"
 }, {
-    "title": "Empty view",
-    "modulePath": "components/firstView/firstView"
+    "title": "Form View",
+    "icon": "~/images/bookmarks.png",
+    "modulePath": "components/formView/formView"
 }, {
-    "title": "Sign in View",
-    "modulePath": "components/signinView/signinView"
-}, {
-    "title": "Sign up View",
+    "title": "Register View",
+    "icon": "~/images/edit.png",
     "modulePath": "components/signupView/signupView"
 }, {
+    "title": "Sign in View",
+    "icon": "~/images/contacts.png",
+    "modulePath": "components/signinView/signinView"
+}, {
     "title": "DataList View",
+    "icon": "~/images/organize.png",
     "modulePath": "components/listView/listView"
 }, {
     "title": "Full DataList View",
+    "icon": "~/images/mostviewed.png",
     "modulePath": "components/fullListView/fullListView"
-}, {
-    "title": "Form View",
-    "modulePath": "components/formView/formView"
 }];
 
 navigationViewModel.set('menuItems', menuItems);
+navigationViewModel.set('pageTitle', 'My NativeScript App');
+navigationViewModel.set('backButtonHidden', true);
 
 module.exports = navigationViewModel;

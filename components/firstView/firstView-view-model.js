@@ -8,6 +8,7 @@ function ViewModel() {
 }
 
 _extends(ViewModel, observable.Observable);
+ViewModel.prototype.pageTitle = 'First View';
 
 // additional properties
 

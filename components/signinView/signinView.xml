@@ -1,21 +1,27 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded">
-    <StackLayout>
+<Page xmlns="http://www.nativescript.org/tns.xsd"
+      xmlns:appbuilder="appbuilder/action-bar"
+      loaded="pageLoaded">
 
-        <Label text="Username" cssClass="label" />
-        <Border borderWidth="1" borderColor="#ccc">
-            <TextField text="{{ username }}" cssClass="input" />
-        </Border>
+    <GridLayout rows="auto, *" swipe="backSwipe">
+        <appbuilder:action-bar />
+        <StackLayout row="1">
 
-        <Label text="Password" cssClass="label" />
-        <Border borderWidth="1" borderColor="#ccc">
-            <TextField text="{{ password }}" secure="true" cssClass="input" />
-        </Border>
+            <Label text="Username" cssClass="label" />
+            <Border borderWidth="1" borderColor="#ccc">
+                <TextField text="{{ username }}" cssClass="input" />
+            </Border>
 
-        <Button text="Login" tap="{{ onLogin }}" />
+            <Label text="Password" cssClass="label" />
+            <Border borderWidth="1" borderColor="#ccc">
+                <TextField text="{{ password }}" secure="true" cssClass="input" />
+            </Border>
 
-        <Button text="Register" tap="{{ onShowRegister }}" />
+            <Button text="Login" tap="{{ onLogin }}" />
+
+            <Button text="Register" tap="{{ onShowRegister }}" />
 
 
-        <!-- additional view content -->
-    </StackLayout>
+            <!-- additional view content -->
+        </StackLayout>
+    </GridLayout>
 </Page>

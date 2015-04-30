@@ -20,9 +20,7 @@ function pageLoaded(args) {
             result.forEach(function(item) {
                 itemsList.push({
                     icon: 'icon',
-
-                    header: item.Text,
-
+                    header: item.Text
                 });
             });
 
