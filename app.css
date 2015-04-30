@@ -9,12 +9,9 @@ image
     vertical-align: center;
 }
 
-label
-{
-    vertical-align: center;
-}
-
-textfield
+label,
+textfield,
+searchbar
 {
     vertical-align: center;
 }
@@ -36,6 +33,11 @@ textfield
 .action-bar-border
 {
     background-color: #bbb;
+}
+
+.form-view
+{
+    padding: 0 12;
 }
 
 .form-item-border

@@ -1,5 +1,5 @@
 'use strict';
-var frameModule = require('ui/frame'),
+var frame = require('ui/frame'),
     // additional requires
     viewModel = require('./formView-view-model');
 
@@ -8,7 +8,7 @@ function onfirstFormFormSubmit() {
 }
 
 function onfirstFormFormCancel() {
-
+    frame.topmost().goBack();
 }
 
 // additional functions
@@ -18,7 +18,7 @@ function pageLoaded(args) {
 
     page.bindingContext = viewModel;
 
-    viewModel.on(viewModel.events.firstFormCancel, onfirstFormFormSubmit);
+    viewModel.on(viewModel.events.firstFormSubmit, onfirstFormFormSubmit);
 
     viewModel.on(viewModel.events.firstFormCancel, onfirstFormFormCancel);
 
