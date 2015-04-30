@@ -5,46 +5,38 @@
     <GridLayout rows="auto, *" swipe="backSwipe">
         <appbuilder:action-bar />
         <StackLayout row="1">
-
             <StackLayout>
 
-                <Label text="TextField" cssClass="label" />
-                <Border borderWidth="1" borderColor="#ccc">
+                <GridLayout columns="*, *" rows="auto" height="56" padding="10">
+                    <Label text="TextField" cssClass="label" verticalAlign="center" />
+                    <TextField col="2" cssClass="input" verticalAlign="center" />
+                </GridLayout>
+                <StackLayout cssClass="form-item-border" height="1"></StackLayout>
 
-                    <TextField cssClass="input" />
+                <GridLayout columns="*, *" rows="auto" height="56" padding="10">
+                    <Label text="SearchBox" cssClass="label" />
+                    <SearchBar col="2" />
+                </GridLayout>
+                <StackLayout cssClass="form-item-border" height="1"></StackLayout>
 
-                </Border>
+                <GridLayout columns="*, *" rows="auto" height="56" padding="10">
+                    <Label text="PasswordBox" cssClass="label" />
+                    <TextField col="2" secure="true" cssClass="input" />
+                </GridLayout>
+                <StackLayout cssClass="form-item-border" height="1"></StackLayout>
 
-
-                <Label text="SearchBox" cssClass="label" />
-                <Border borderWidth="1" borderColor="#ccc">
-
-                    <SearchBar />
-
-                </Border>
-
-
-                <Label text="PasswordBox" cssClass="label" />
-                <Border borderWidth="1" borderColor="#ccc">
-
-                    <TextField secure="true" cssClass="input" />
-
-                </Border>
-
-
-                <Label text="SwitchField" cssClass="label" />
-                <Border borderWidth="1" borderColor="#ccc">
-
-                    <Switch checked="false" />
-
-                </Border>
+                <GridLayout columns="*, *" rows="auto" height="56" padding="10">
+                    <Label text="SwitchField" cssClass="label" />
+                    <Switch col="2" checked="false" />
+                </GridLayout>
+                <StackLayout cssClass="form-item-border" height="1"></StackLayout>
 
                 <!-- firstForm additional fields -->
 
-                <Button text="Cancel" tap="onfirstFormFormCancel" />
-
-
-                <Button text="Confirm" tap="onfirstFormFormSubmit" />
+                <GridLayout columns="*, *" rows="auto" height="56" padding="10">
+                    <Button text="Cancel" tap="onfirstFormFormCancel" />
+                    <Button col="2" text="Confirm" tap="onfirstFormFormSubmit" />
+                </GridLayout>
 
             </StackLayout>
 

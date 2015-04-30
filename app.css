@@ -1,7 +1,6 @@
 button
 {
-    font-size: 42;
-    horizontal-align: center;
+    horizontal-align: stretch;
 }
 
 image
@@ -11,6 +10,11 @@ image
 }
 
 label
+{
+    vertical-align: center;
+}
+
+textfield
 {
     vertical-align: center;
 }
@@ -32,6 +36,11 @@ label
 .action-bar-border
 {
     background-color: #bbb;
+}
+
+.form-item-border
+{
+    background-color: #ccc;
 }
 
 .page-title
